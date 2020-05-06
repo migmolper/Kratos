@@ -47,7 +47,7 @@ namespace Kratos
 ///@{
 
 /**
- * @brief Computes the reaction forces for slip modelpart, can be 
+ * @brief Computes the reaction forces for slip modelpart, can be
  *        further used for drag calculation
  *
  * This process sets epsilon values based on the following formula
@@ -177,6 +177,8 @@ private:
     ///@{
 
     void CalculateReactionValues(ModelPart::ConditionType& rCondition);
+
+    void CorrectPeriodicNodes(ModelPart& rModelPart, const Variable<array_1d<double, 3>>& rVariable);
 
     ///@}
     ///@name Private  Access
